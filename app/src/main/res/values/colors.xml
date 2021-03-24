@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#2f4859</color> <!-- Blue Yonder -->
+    <color name="colorPrimaryDark">#324376</color> <!-- Dark Cornflower Blue -->
+    <color name="colorAccent">#F68E5F</color> <!-- Atomic Tangerine -->
+    <color name="colorBittersweet">#F76C5E</color>
+    <color name="colorCadetBlue">#61A0AF</color>
+    <color name="colorSkyBlue">#324376</color>
+    <color name="colorAzure">#0292c9</color>
+    <color name="colorRed">#bc161c</color>
+    <color name="colorGreen">#73d321</color>
+    <color name="colorGreen2">#99cc00</color>
+    <color name="questionMarkYellow">#ffbc4f</color>
+    <color name="questionMarkOrange">#ff7d4f</color>
+    <color name="colorGrey">#e1e6e9</color>
+    <color name="joystickGreen">#2ad3b3</color>
+    <color name="joystickYellow">#fbb540</color>
+    <color name="joystickPink">#faa6b2</color>
+    <color name="darkPink">#f076b2</color>
+    <color name="joystickLightBlue">#2cbff4</color>
+    <color name="black">#111111</color>
+    <color name="blue2">#4fa5d5</color>
+    <color name="grey">#999DA0</color>
+    <color name="grey2">#3F3F3F</color>
+
+    <color name="transparent10">#1A000000</color>
+    <color name="transparent20">#33000000</color>
+    <color name="transparent30">#4D000000</color>
+    <color name="transparent40">#66000000</color>
+    <color name="transparent50">#80000000</color>
+    <color name="transparent60">#99000000</color>
+    <color name="transparent70">#B3000000</color>
+    <color name="transparent80">#CC000000</color>
+    <color name="transparent90">#E6000000</color>
+    <color name="transparent100">#00000000</color>
+
+    <color name="colorPurple">#6c63ff</color>
+    <color name="colorIndigo">#303F9F</color>
+    <color name="colorBlueMidnight">#003366</color>
+    <color name="colorWhite">#FFFFFF</color>
+
+    <color name="color_turquoise">#1abc9c</color>
+    <color name="color_green_sea">#16a085</color>
+    <color name="color_emerald">#2ecc71</color>
+    <color name="color_nephritis">#27ae60</color>
+    <color name="color_peter_river">#3498db</color>
+    <color name="color_belize_hole">#2980b9</color>
+    <color name="color_amethyst">#9b59b6</color>
+    <color name="color_wisteria">#8e44ad</color>
+    <color name="color_wet_asphalt">#34495e</color>
+    <color name="color_midnight_blue">#2c3e50</color>
+    <color name="color_sun_flower">#f1c40f</color>
+    <color name="color_orange">#f39c12</color>
+    <color name="color_carrot">#e67e22</color>
+    <color name="color_pumpkin">#d35400</color>
+    <color name="color_alizarin">#e74c3c</color>
+    <color name="color_pomegranate">#c0392b</color>
+    <color name="color_clouds">#ecf0f1</color>
+    <color name="color_silver">#bdc3c7</color>
+    <color name="color_concrete">#95a5a6</color>
+    <color name="color_asbestos">#7f8c8d</color>
+
+</resources>

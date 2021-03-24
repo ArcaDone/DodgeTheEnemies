@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="MissingDefaultResource">
+
+    <data>
+
+        <import
+            alias="v"
+            type="android.view.View" />
+
+        <variable
+            name="shopViewModel"
+            type="com.arcadan.dodgetheenemies.viewmodel.ShopViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimaryDark"
+        tools:context=".fragments.ShopFragment">
+
+        <ImageButton
+            android:id="@+id/back_button"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_alignParentEnd="true"
+            android:layout_margin="8dp"
+            android:background="@drawable/bn_back"
+            android:onClick="@{(v)-> shopViewModel.goBack(v)}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <include
+            android:id="@+id/main_top_bar"
+            layout="@layout/top_bar"
+            app:layout_constraintStart_toEndOf="@+id/back_button"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/button_frame"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/rectangle_shop"
+            app:layout_constraintBottom_toTopOf="@+id/guideline1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/main_top_bar" />
+
+        <Button
+            android:id="@+id/power_up_coins_shop_section"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginStart="40dp"
+            app:layout_constraintDimensionRatio="2"
+            android:background="@drawable/buttonpowerup"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:onClick="@{()-> shopViewModel.showPowerUp()}"
+            app:layout_constraintBottom_toBottomOf="@+id/button_frame"
+            app:layout_constraintEnd_toStartOf="@+id/heart_shop_section"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/button_frame"
+            tools:ignore="SmallSp" />
+
+        <Button
+            android:id="@+id/heart_shop_section"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginStart="24dp"
+            app:layout_constraintDimensionRatio="2"
+            android:background="@drawable/buttonhearts"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:onClick="@{()-> shopViewModel.showHeartsItems()}"
+            app:layout_constraintBottom_toBottomOf="@+id/button_frame"
+            app:layout_constraintEnd_toStartOf="@+id/coins_shop_section"
+            app:layout_constraintStart_toEndOf="@+id/power_up_coins_shop_section"
+            app:layout_constraintTop_toTopOf="@+id/button_frame"
+            tools:ignore="SmallSp" />
+
+        <Button
+            android:id="@+id/coins_shop_section"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginStart="24dp"
+            app:layout_constraintDimensionRatio="2"
+            android:background="@drawable/buttoncoins"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:onClick="@{()-> shopViewModel.showCoinsItems()}"
+            app:layout_constraintBottom_toBottomOf="@+id/button_frame"
+            app:layout_constraintEnd_toStartOf="@+id/gem_shop_section"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/heart_shop_section"
+            app:layout_constraintTop_toTopOf="@+id/button_frame"
+            tools:ignore="SmallSp" />
+
+        <Button
+            android:id="@+id/gem_shop_section"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginStart="24dp"
+            app:layout_constraintDimensionRatio="2"
+            android:background="@drawable/buttongems"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:onClick="@{()-> shopViewModel.showGemItems()}"
+            app:layout_constraintBottom_toBottomOf="@+id/button_frame"
+            app:layout_constraintEnd_toStartOf="@+id/skin_shop_section"
+            app:layout_constraintStart_toEndOf="@+id/coins_shop_section"
+            app:layout_constraintTop_toBottomOf="@+id/main_top_bar"
+            tools:ignore="SmallSp" />
+
+        <Button
+            android:id="@+id/skin_shop_section"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="40dp"
+            app:layout_constraintDimensionRatio="2"
+            android:background="@drawable/buttonskins"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:onClick="@{(v)-> shopViewModel.showDodgersSkinItems(v)}"
+            app:layout_constraintBottom_toBottomOf="@+id/button_frame"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/gem_shop_section"
+            app:layout_constraintTop_toTopOf="@+id/button_frame"
+            tools:ignore="SmallSp" />
+
+        <ImageView
+            android:id="@+id/coin_anim"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:elevation="20dp"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_coin" />
+
+        <ImageView
+            android:id="@+id/hearts_anim"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="center"
+            android:elevation="20dp"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_heart" />
+
+        <ImageView
+            android:id="@+id/gems_anim"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:elevation="20dp"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_gem" />
+
+        <ImageView
+            android:id="@+id/banner_shop"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="8dp"
+            android:elevation="20dp"
+            app:layout_constraintBottom_toTopOf="@+id/guideline12"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/guideline1"
+            app:srcCompat="@drawable/banner_shop" />
+
+        <TextView
+            android:id="@+id/number_animation"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:background="@drawable/plus_one"
+            android:elevation="20dp"
+            app:layout_constraintEnd_toEndOf="@+id/power_up_coins_shop_section"
+            app:layout_constraintTop_toTopOf="@+id/power_up_coins_shop_section" />
+
+        <ImageView
+            android:id="@+id/recycler_frame"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/rectangle_shop"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/guideline12" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/shop_list_recycler"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:paddingStart="30dp"
+            android:paddingEnd="20dp"
+            android:paddingBottom="4dp"
+            android:paddingTop="20dp"
+            android:foregroundGravity="center"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toBottomOf="@+id/recycler_frame"
+            app:layout_constraintEnd_toEndOf="@+id/recycler_frame"
+            app:layout_constraintStart_toStartOf="@+id/recycler_frame"
+            app:layout_constraintTop_toTopOf="@+id/recycler_frame"
+            app:shopListData="@{shopViewModel.items}" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.3" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.50" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.15" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

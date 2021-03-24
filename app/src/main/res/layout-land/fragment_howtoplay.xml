@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="MissingDefaultResource">
+
+    <data>
+
+        <import
+            alias="v"
+            type="android.view.View" />
+
+        <variable
+            name="howToPlayViewModel"
+            type="com.arcadan.dodgetheenemies.viewmodel.HowToPlayViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background_sky"
+        tools:context=".HowToPlayActivity">
+
+        <TextView
+            android:id="@+id/how_to_play_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="8dp"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp"
+            android:text="@string/how_to_play"
+            android:textColor="@color/colorPrimary"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <ImageButton
+            android:id="@+id/back_button"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentEnd="true"
+            android:layout_margin="8dp"
+            android:background="@drawable/bn_back"
+            android:contentDescription="@string/button_back"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:onClick="@{(v)-> howToPlayViewModel.backButtonClick(v)}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <ScrollView
+            android:id="@+id/scroll_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/how_to_play_title"
+            app:layout_constraintVertical_bias="0.67"
+            tools:ignore="MissingDefaultResource"
+            tools:layout_editor_absoluteX="0dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/accelerometer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginBottom="16dp"
+                    android:background="@android:color/transparent"
+                    android:contentDescription="@string/accelerometer"
+                    android:onClick="@{(v)-> howToPlayViewModel.rotateImage(v)}"
+                    android:src="@drawable/ic_rotate"
+                    app:layout_constraintBottom_toTopOf="@+id/guideline7"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/guideline6"
+                    app:layout_constraintVertical_bias="0.2" />
+
+                <TextView
+                    android:id="@+id/text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginEnd="16dp"
+                    android:layout_toEndOf="@+id/accelerometer"
+                    android:maxWidth="450dp"
+                    android:text="@string/how_to_play_desc"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@+id/accelerometer"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/accelerometer" />
+
+                <ImageView
+                    android:id="@+id/accelerometer2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="24dp"
+                    android:background="@android:color/transparent"
+                    android:contentDescription="@string/accelerometer"
+                    android:rotation="45"
+                    android:src="@drawable/ic_rotate_2"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/guideline7" />
+
+                <ImageView
+                    android:id="@+id/dodger_image"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="10dp"
+                    android:contentDescription="@string/dodger_how_to_play"
+                    android:onClick="@{(v)-> howToPlayViewModel.dodgerJump(v)}"
+                    app:layout_constraintBottom_toBottomOf="@+id/accelerometer2"
+                    app:layout_constraintEnd_toEndOf="@+id/accelerometer2"
+                    app:layout_constraintStart_toStartOf="@+id/accelerometer2"
+                    app:layout_constraintTop_toTopOf="@+id/guideline7"
+                    app:srcCompat="@drawable/icon_dodger" />
+
+                <TextView
+                    android:id="@+id/text_view_2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginEnd="16dp"
+                    android:layout_toEndOf="@+id/accelerometer2"
+                    android:maxWidth="450dp"
+                    android:text="@string/how_to_play_desc_2"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@+id/accelerometer2"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="@+id/text_view"
+                    app:layout_constraintTop_toTopOf="@+id/accelerometer2" />
+
+                <ImageView
+                    android:id="@+id/backpack_image"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="32dp"
+                    android:background="@android:color/transparent"
+                    android:contentDescription="@string/accelerometer"
+                    android:onClick="@{(v)->howToPlayViewModel.doItemsAnimation(slurpRedItem,speedUpItem,megaJumpItem,doubleCoinItem )}"
+                    android:src="@drawable/bn_how_inventory"
+                    app:layout_constraintEnd_toEndOf="@+id/accelerometer2"
+                    app:layout_constraintStart_toStartOf="@+id/accelerometer2"
+                    app:layout_constraintTop_toTopOf="@+id/guideline5" />
+
+                <TextView
+                    android:id="@+id/text_view_3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginEnd="16dp"
+                    android:layout_toEndOf="@+id/backpack_image"
+                    android:text="@string/how_to_play_desc_3"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@+id/backpack_image"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/text_view_2"
+                    app:layout_constraintTop_toTopOf="@+id/backpack_image" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginEnd="32dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/backpack_image"
+                    app:layout_constraintEnd_toStartOf="@+id/text_view_3"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toEndOf="@+id/backpack_image"
+                    app:layout_constraintTop_toTopOf="@+id/backpack_image">
+
+                    <ImageView
+                        android:id="@+id/slurp_red_item"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/background_rounded"
+                        android:backgroundTint="@color/joystickLightBlue"
+                        android:contentDescription="@string/image_inventory"
+                        android:padding="5dp"
+                        android:src="@drawable/power_up_slurp_red"
+                        app:layout_constraintEnd_toStartOf="@+id/speed_up_item"
+                        app:layout_constraintHorizontal_bias="0.51"
+                        app:layout_constraintHorizontal_chainStyle="spread"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/speed_up_item"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:background="@drawable/background_rounded"
+                        android:backgroundTint="@color/joystickPink"
+                        android:contentDescription="@string/image_inventory"
+                        android:padding="5dp"
+                        android:src="@drawable/power_up_speed_up"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toEndOf="@+id/slurp_red_item"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/mega_jump_item"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:background="@drawable/background_rounded"
+                        android:backgroundTint="@color/joystickYellow"
+                        android:contentDescription="@string/image_inventory"
+                        android:padding="5dp"
+                        android:src="@drawable/power_up_mega_jump"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/double_coin_item"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/double_coin_item"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:background="@drawable/background_rounded"
+                        android:backgroundTint="@color/joystickGreen"
+                        android:contentDescription="@string/image_inventory"
+                        android:padding="5dp"
+                        android:src="@drawable/power_up_double_coins"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toEndOf="@+id/mega_jump_item" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideline7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintGuide_begin="190dp" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideline5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintGuide_begin="360dp" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideline6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintGuide_begin="10dp" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideline8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintGuide_begin="550dp" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

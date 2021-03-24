@@ -1,0 +1,48 @@
+<resources>
+
+    <style name="AppTheme" parent="Theme.AppCompat.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:fontFamily">@font/aldrich</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+    <style name="AppTheme.Launcher">
+        <item name="android:windowBackground">@drawable/launch_screen</item>
+    </style>
+
+    <style name="AppBottomSheetDialogTheme" parent="ThemeOverlay.MaterialComponents.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/AppModalStyle</item>
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+    <style name="AppModalStyle" parent="ThemeOverlay.MaterialComponents.BottomSheetDialog">
+        <item name="android:background">@drawable/rounded_bottom_sheet_dialog</item>
+    </style>
+
+
+    <!-- Theme for OnBoardingActivity (applying some transition) -->
+    <style name="AppTheme.OnBoarding">
+        <item name="android:windowSharedElementsUseOverlay">false</item>
+        <item name="android:windowContentTransitions">true</item>
+        <item name="android:background">@drawable/rounded_bottom_sheet_dialog</item>
+        <item name="android:windowExitTransition">@transition/activity_main_exit</item>
+        <item name="android:windowReenterTransition">@transition/activity_main_reenter</item>
+    </style>
+    <!--Styling TextInputLayout colors-->
+    <style name="EditText.Login" parent="Widget.AppCompat.EditText">
+        <item name="colorControlNormal">@color/colorGrey</item>
+        <item name="colorControlActivated">@color/colorGrey</item>
+    </style>
+    <style name="Widget.MaterialComponents.Button.TextButton.OnBoardTextButton"
+        parent="Widget.MaterialComponents.Button.TextButton">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:textColor">@color/colorPurple</item>
+    </style>
+
+    <style name="SwitchCompatStyleGreen" >
+        <item name="trackTint">@color/switch_color_private</item>
+    </style>
+</resources>

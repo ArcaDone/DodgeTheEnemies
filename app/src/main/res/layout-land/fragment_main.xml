@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="MissingDefaultResource">
+
+    <data>
+
+        <import
+            alias="v"
+            type="android.view.View" />
+
+        <variable
+            name="mainViewModel"
+            type="com.arcadan.dodgetheenemies.viewmodel.MainViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background_winter"
+        tools:context=".fragments.MainFragment">
+
+        <nl.dionsegijn.konfetti.KonfettiView
+            android:id="@+id/celebration_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:elevation="20dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="190dp" />
+
+        <ImageView
+            android:id="@+id/animation"
+            android:layout_width="100dp"
+            android:layout_height="0dp"
+            android:elevation="20dp"
+            android:rotation="180"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="@+id/shop_image"
+            app:layout_constraintEnd_toStartOf="@+id/shop_image"
+            app:layout_constraintTop_toTopOf="@+id/shop_image" />
+
+        <include
+            android:id="@+id/tab"
+            layout="@layout/top_bar_vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/guideline"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            bind:mainViewModel="@{mainViewModel}" />
+
+        <Button
+            android:id="@+id/playButton"
+            android:layout_width="240dp"
+            android:layout_height="140dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:background="@drawable/play_button"
+            android:enabled="false"
+            android:onClick="@{(v)->mainViewModel.playButtonClick(v)}"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:visibility="@{mainViewModel.observableVisibilityPlayButton ? v.VISIBLE : v.GONE}"
+            app:cornerRadius="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.499"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.42" />
+
+        <ImageButton
+            android:layout_width="10dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rope"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/inventory"
+            app:layout_constraintStart_toStartOf="@+id/inventory"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/how_to_play_button"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="16dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/bn_howtoplay"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:onClick="@{(v)->mainViewModel.goToHowToPlay(v)}"
+            app:layout_constraintBottom_toBottomOf="@+id/shop_image"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/shop_image"
+            tools:ignore="UnknownIdInLayout" />
+
+        <ImageButton
+            android:id="@+id/settings"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="16dp"
+            android:enabled="false"
+            android:background="@drawable/bn_setting"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:onClick="@{(v)->mainViewModel.goToSettings(v)}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/skin"
+            app:layout_constraintStart_toStartOf="@+id/skin"
+            app:layout_constraintTop_toBottomOf="@+id/skin"
+            app:layout_constraintVertical_bias="0.0"
+            tools:ignore="UnknownIdInLayout" />
+
+        <ImageButton
+            android:id="@+id/inventory"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_alignParentEnd="true"
+            android:background="@drawable/bn_how_inventory"
+            android:layout_marginTop="16dp"
+            android:enabled="false"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:onClick="@{(v)->mainViewModel.goToInventory(v)}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/skin"
+            app:layout_constraintStart_toStartOf="@+id/skin"
+            app:layout_constraintTop_toBottomOf="@+id/settings"
+            app:layout_constraintVertical_bias="0.0"
+            tools:ignore="UnknownIdInLayout" />
+
+        <ImageButton
+            android:id="@+id/skin"
+            f="@+id/inventory"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/button_skin"
+            android:enabled="false"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:onClick="@{(v)->mainViewModel.goToSkin(v)}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/playButton"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            tools:ignore="UnknownIdInLayout" />
+
+        <ImageButton
+            android:id="@+id/shop_image"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/bn_shopping"
+            android:enabled="false"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:onClick="@{(v)->mainViewModel.goToShop(v)}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/inventory"
+            app:layout_constraintTop_toBottomOf="@+id/inventory"
+            app:layout_constraintVertical_bias="0.6" />
+
+        <com.google.android.gms.ads.AdView
+            android:id="@+id/ad_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            app:adSize="BANNER"
+            app:adUnitId="@string/bannerMain"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/playButton" />
+
+        <ImageView
+            android:id="@+id/level_up_image"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:elevation="18dp"
+            android:layout_margin="60dp"
+            android:visibility="@{mainViewModel.observableBooleanLevelUp ? v.VISIBLE : v.GONE}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            bind:srcCompat="@drawable/level_up" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

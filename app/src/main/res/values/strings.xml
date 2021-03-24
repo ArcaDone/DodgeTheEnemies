@@ -1,0 +1,162 @@
+<resources>
+    <string name="app_name">Dodge the enemies</string>
+    <string name="choose_the_level">Choose the level</string>
+    <string name="play" translatable="false">Play</string>
+    <string name="default_record" translatable="false">0</string>
+    <string name="record_image" translatable="false">record image</string>
+    <string name="pause">Pause</string>
+    <string name="game_over" translatable="false">game_over</string>
+    <string name="accelerometer" translatable="false">Accelerometer</string>
+    <string name="back_button" translatable="false">Back Button</string>
+    <string name="how_to_play_desc">Rotate your phone left and right to dodge           enemies falling from above.           The accelerometer integrated in           your device will move the character           in the desired direction</string>
+    <string name="home" translatable="false">Home</string>
+
+    <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>
+    <string name="how_to_play">How to play</string>
+    <string name="description" translatable="false">Description</string>
+    <string name="level_title" translatable="false">Level Title</string>
+    <string name="icon_pause" translatable="false">icon_pause</string>
+    <string name="settings_text">Settings</string>
+    <string name="privacy_policy" translatable="false">Privacy Policy</string>
+    <string name="terms_of_service">Terms of Service</string>
+    <string name="app_version" translatable="false">App Version: 1.0.19</string>
+    <string name="default_value" translatable="false">00000</string>
+    <string name="dodgers" translatable="false">Dodgers</string>
+    <string name="delta_hearts" translatable="false">-10</string>
+    <string name="play_small_10_small" translatable="false">Play</string>
+    <string name="not_enough_hearts">You don\'t have enough hearts</string>
+    <string name="dismiss">Dismiss</string>
+    <string name="unlocked_level">You have not unlocked this level yet</string>
+    <string name="player_id" translatable="false">Player ID:   </string>
+    <string name="inventory_item" translatable="false">Inventory Item</string>
+    <string name="not_enough_gems">You don\'t have enough gems</string>
+    <string name="not_enough_coins">You don\'t have enough coins</string>
+    <string name="coin_image" translatable="false">coin_image</string>
+    <string name="information_coins" translatable="false">Information Coins</string>
+    <string name="lorem_ipsum" translatable="false">Lorem ipsum dolor sit amet, consectetur adipisci elit, \n sed do eiusmod tempor incidunt ut labore et dolore magna aliqua. \n Ut enim ad minim veniam, quis nostrum \n exercitationem ullamco laboriosam, \n nisi ut aliquid ex ea commodi consequatur. \n Duis aute irure reprehenderit in voluptate velit \n esse cillum dolore eu fugiat nulla pariatur. \n Excepteur sint obcaecat cupiditat non proident,\n sunt in culpa qui officia deserunt mollit anim id est laborum.</string>
+    <string name="information_gem" translatable="false">Information Gem</string>
+    <string name="image_gem" translatable="false">Image gem</string>
+    <string name="information_heart" translatable="false">Information Heart</string>
+    <string name="image_heart" translatable="false">Image heart</string>
+    <string name="hearts_reward_title">Not enough hearts ? No problem:</string>
+    <string name="heart_image_click" translatable="false">Heart image click</string>
+    <string name="image_inventory" translatable="false">Image Inventory</string>
+    <string name="coins_image_main" translatable="false">Coins Image Main</string>
+    <string name="home_button" translatable="false">Home Button</string>
+    <string name="button_back" translatable="false">Button Back</string>
+    <string name="inventory">Inventory</string>
+    <string name="arrow_animation" translatable="false">Arrow animation</string>
+    <string name="shop_image" translatable="false">Shop Image</string>
+    <string name="settings" translatable="false">Settings</string>
+    <string name="music">Music</string>
+    <string name="setting_2" translatable="false">Setting 2</string>
+    <string name="character" translatable="false">Character</string>
+    <string name="shopping">Shopping</string>
+    <string name="main_level_image" translatable="false">Main Level Image</string>
+    <string name="_80" translatable="false">80</string>
+    <string name="_30_gems" translatable="false">30 gems</string>
+    <string name="left_icon_image" translatable="false">Left Icon Image</string>
+    <string name="shop_main_item" translatable="false">Shop Main Item</string>
+    <string name="top_bar_heart_image" translatable="false">Top Bar Heart Image</string>
+    <string name="top_bar_gem_image" translatable="false">Top Bar Gem Image</string>
+    <string name="top_bar_coins_image" translatable="false">Top Bar Coins Image</string>
+    <string name="fire_item" translatable="false">Fire Item</string>
+    <string name="avoided_enemies" translatable="false">Avoided Enemies</string>
+    <string name="background_veil" translatable="false">Background veil</string>
+    <string name="star_image" translatable="false">Star Image</string>
+    <string name="podium" translatable="false">Podium</string>
+    <string name="how_to_play_button" translatable="false">How to play button</string>
+    <string name="exploded_consumable_image" translatable="false">Exploded Consumable Image</string>
+    <string name="consumable_counter_size" translatable="false">Consumable counter size</string>
+    <string name="consumable_item" translatable="false">Consumable Item</string>
+    <string name="discard">Discard</string>
+    <string name="evening_background" translatable="false">Evening Background</string>
+    <string name="coins_double_image" translatable="false">Coins Double Image</string>
+    <string name="gems">Gems</string>
+    <string name="coins">Coins</string>
+    <string name="power_up">Power Up</string>
+    <string name="dodgers_skins" translatable="false">Dodger skins</string>
+    <string name="choose_power_ups">Choose your power ups</string>
+    <string name="plus_one" translatable="false">+1</string>
+    <string name="how_to_play_desc_2">Click anywhere on the screen to \n allow your Dodger to jump. \n This is useful for \n dodging low ground opponents or \n for reaching the higher parts \n of the screen</string>
+    <string name="dodger_how_to_play" translatable="false">Dodger How to play</string>
+    <string name="how_to_play_desc_3">Take the best Power Ups   with you to win the game</string>
+    <string name="hearts">Hearts</string>
+    <string name="player_level" translatable="false">lvl %1$s</string>
+    <string name="not_enough_power_up">You don\'t have enough PowerUps of this type</string>
+    <string name="go_to_shop">Go to Shop</string>
+    <string name="watch_video_title">Watch a video and \n receive 20 Hearts</string>
+    <string name="day_video_limits">You cannot view a video more than 25 times a day</string>
+    <string name="level_up_image" translatable="false">Level up Image</string>
+    <string name="internet_status_connected">Connected</string>
+    <string name="internet_status_disconnected">Not Connected</string>
+    <string name="check_internet_connection">Check your Internet Connection</string>
+    <string name="locked_background" translatable="false">LOCKED BACKGROUND</string>
+    <string name="play_next" translatable="false">Next</string>
+    <string name="coming_soon">Coming soon</string>
+    <string name="retry_level">Retry</string>
+    <string name="slurp_description">Shrink your Dodger to dodge more enemies</string>
+    <string name="speed_up_description">Run faster</string>
+    <string name="mega_jump_description">Jump Higher</string>
+    <string name="double_coins_description">Double the coins at the end of the level</string>
+    <string name="selected_level_title">Selected level: %d</string>
+    <string name="watch_me">Watch me</string>
+
+    <string name="onboarding_slide1_title" translatable="false">Dodgers</string>
+    <string name="onboarding_slide1_subtitle">Move your Dodger left and right</string>
+    <string name="onboarding_slide2_subtitle">Dodge enemies jumping</string>
+    <string name="onboarding_slide3_subtitle">Fill your backpack</string>
+
+
+    <string name="next">Next</string>
+    <string name="skip">Skip</string>
+    <string name="get_started">GO!!!!</string>
+    <string name="double_the_coins_earned">Double the coins you \n have earned with \n the power of the web</string>
+    <string name="level">Level</string>
+    <string name="rewards">Rewards:</string>
+    <string name="speed_down">Slow!!!</string>
+    <string name="evening">Evening!!!</string>
+    <string name="reverse_string">Reverse!!!</string>
+    <string name="slurp_blue">Giant!!!</string>
+    <string name="app_id">123456789</string> <!--    PlaceHolder-->
+    <string name="error" translatable="false">Error</string>
+    <string name="hand_gems">Hand Gems</string>
+    <string name="double_hand_gems">Double hand Gems</string>
+    <string name="bag_of_gems">Bag of Gems</string>
+    <string name="lot_of_gems">Lot of Gems</string>
+    <string name="box_of_gems">Box of Gems</string>
+    <string name="big_gem_chest">Big Gems Chest</string>
+    <string name="try_later">Try Later</string>
+    <string name="use_joystick">Use Joystick</string>
+    <string name="new_experience" translatable="false">New Experience</string>
+    <string name="city_life" translatable="false">City life</string>
+    <string name="fear_of_the_dark" translatable="false">Fear of the dark?</string>
+    <string name="sunset_or_sunscine" translatable="false">Sunset or sunrise?</string>
+    <string name="out_of_town" translatable="false">Out of town</string>
+    <string name="orienteering" translatable="false">Orienteering</string>
+    <string name="day_in_the_mountains" translatable="false">Day in the mountains</string>
+    <string name="evening_in_the_mountains" translatable="false">Evening in the mountains</string>
+    <string name="slurp_blue_effect" translatable="false">How would i be when i grow up?</string>
+    <string name="night_in_the_mountains" translatable="false">Night in the mountains</string>
+    <string name="there_is_snow" translatable="false">There is snow</string>
+    <string name="ok_i_hate_the_snow" translatable="false">Ok, i hate the snow</string>
+    <string name="do_you_like_a_bee" translatable="false">Do you like a bee?</string>
+    <string name="is_this_the_hell" translatable="false">Is this the hell?</string>
+    <string name="other_side_of_the_moon" translatable="false">Other side of the moon</string>
+    <string name="moon_land" translatable="false">Moon land</string>
+    <string name="earth_like" translatable="false">Earth like</string>
+    <string name="sound_like_beautiful" translatable="false">Sound like beautiful</string>
+    <string name="moon_bedroom" translatable="false">My moon bedroom</string>
+    <string name="engine_room" translatable="false">Engine room</string>
+    <string name="bridge" translatable="false">Bridge</string>
+    <string name="bad_feeling" translatable="false">Bad feeling</string>
+    <string name="relax_time" translatable="false">Relax time</string>
+    <string name="smell_of_victory" translatable="false">Smell of victory</string>
+    <string name="autumn" translatable="false">Autumn</string>
+    <string name="cemetery" translatable="false">Cemetery</string>
+    <string name="loading">Loading...</string>
+    <string name="beautiful_atmosphere">Beautiful atmosphere</string>
+    <string name="go_home">I want to go home...</string>
+    <string name="not_my_home">But not this home!</string>
+    <string name="better">OK, Better!!!</string>
+</resources>

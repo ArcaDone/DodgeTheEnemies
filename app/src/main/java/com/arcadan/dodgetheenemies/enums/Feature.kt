@@ -1,0 +1,21 @@
+package com.arcadan.dodgetheenemies.enums
+
+enum class Feature {
+    RUN,
+    JUMP,
+    SPAWN_COINS,
+    INCREASE_GAME_SPEED,
+    RANDOM_SPAWN_DELAY,
+    DECREASE_SPAWN_DELAY,
+    DECREASE_SPAWN_DELAY_VARIATION,
+    SCROLLING,
+    SLURP_BLUE,
+    SPEED_DOWN,
+    REVERSE,
+    EVENING,
+    SURFACE_DESERT,
+    SURFACE_GRASS_AND_MUSHROOMS,
+    SURFACE_WOOD,
+    SURFACE_IRON,
+    SURFACE_ROCK
+}

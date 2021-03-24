@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="MissingDefaultResource">
+
+    <data>
+        <variable
+            name="v"
+            type="android.view.View" />
+
+        <variable
+            name="gameWonViewModel"
+            type="com.arcadan.dodgetheenemies.viewmodel.GameWonViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/fragment_game_won"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background_win_image">
+
+        <ImageView
+            android:id="@+id/game_win_image"
+            android:layout_width="600dp"
+            android:layout_height="600dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/podium"
+            android:src="@drawable/ic_podium"
+            app:layout_constraintBottom_toTopOf="@+id/play_game"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/recordText"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="204dp"
+            android:background="@drawable/rounde_button_play"
+            android:drawableEnd="@drawable/ic_xp"
+            android:gravity="center"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:text="@string/default_record"
+            android:textColor="@color/joystickLightBlue"
+            android:textSize="60sp"
+            android:textStyle="bold"
+            app:cornerRadius="10dp"
+            app:layout_constraintBottom_toBottomOf="@+id/game_win_image"
+            app:layout_constraintEnd_toStartOf="@+id/play_game"
+            app:layout_constraintTop_toTopOf="@+id/game_win_image"
+            tools:ignore="RelativeOverlap" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/coins_main_item"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:layout_weight="1"
+            app:cardCornerRadius="15dp"
+            app:layout_constraintBottom_toBottomOf="@+id/game_win_image"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/game_win_image"
+            app:layout_constraintTop_toTopOf="@+id/game_win_image">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="@color/joystickLightBlue">
+
+                <TextView
+                    android:id="@+id/coins_game_won_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:gravity="center"
+                    android:paddingStart="8dp"
+                    android:text="@string/default_record"
+                    android:textColor="@color/colorGrey"
+                    android:textSize="40sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="RelativeOverlap,RtlSymmetry" />
+
+                <ImageView
+                    android:id="@+id/coins_main_image"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:background="@drawable/ic_coins"
+                    android:contentDescription="@string/coins_image_main"
+                    app:layout_constraintBottom_toBottomOf="@+id/coins_game_won_text"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/coins_game_won_text"
+                    app:layout_constraintTop_toTopOf="@+id/coins_game_won_text" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <Button
+            android:id="@+id/double_coins_earned"
+            android:layout_width="0dp"
+            android:layout_height="200dp"
+            android:layout_marginEnd="48dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/button_selector_red"
+            android:text="@string/double_the_coins_earned"
+            android:textAlignment="center"
+            android:textSize="24sp"
+            android:foreground="?android:attr/selectableItemBackground"
+            app:layout_constraintBottom_toTopOf="@+id/coins_main_item"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/game_win_image"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <ImageView
+            android:id="@+id/gem_won_image"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="80dp"
+            android:background="@drawable/ic_gem"
+            android:contentDescription="@string/image_gem"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/coins_main_item" />
+
+        <ImageView
+            android:id="@+id/coin_won_image"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="80dp"
+            android:background="@drawable/ic_coin"
+            android:contentDescription="@string/coin_image"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/gem_won_image" />
+
+        <ImageView
+            android:id="@+id/hearts_won_image"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="80dp"
+            android:contentDescription="@string/image_heart"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/coin_won_image"
+            app:srcCompat="@drawable/ic_heart" />
+
+        <TextView
+            android:id="@+id/gem_won_text"
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            android:layout_margin="6dp"
+            android:gravity="center"
+            android:paddingStart="8dp"
+            android:textColor="@android:color/holo_red_dark"
+            android:textSize="62sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/gem_won_image"
+            app:layout_constraintEnd_toStartOf="@+id/gem_won_image"
+            app:layout_constraintTop_toTopOf="@+id/gem_won_image"
+            tools:ignore="RelativeOverlap,RtlSymmetry" />
+
+        <TextView
+            android:id="@+id/coins_won_text"
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            android:layout_margin="6dp"
+            android:gravity="center"
+            android:paddingStart="8dp"
+            android:textColor="@android:color/holo_red_dark"
+            android:textSize="62sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/coin_won_image"
+            app:layout_constraintEnd_toStartOf="@+id/coin_won_image"
+            app:layout_constraintTop_toTopOf="@+id/coin_won_image"
+            tools:ignore="RelativeOverlap,RtlSymmetry" />
+
+        <TextView
+            android:id="@+id/hearts_won_text"
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            android:layout_margin="6dp"
+            android:gravity="center"
+            android:paddingStart="8dp"
+            android:textColor="@android:color/holo_red_dark"
+            android:textSize="62sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/hearts_won_image"
+            app:layout_constraintEnd_toStartOf="@+id/hearts_won_image"
+            app:layout_constraintTop_toTopOf="@+id/hearts_won_image"
+            tools:ignore="RelativeOverlap,RtlSymmetry" />
+
+        <Button
+            android:id="@+id/play_game"
+            android:layout_width="360dp"
+            android:layout_height="200dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="64dp"
+            android:background="@drawable/button_selector_green"
+            android:text="@string/next"
+            android:textSize="80sp"
+            android:elevation="0dp"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            app:cornerRadius="20dp"
+            android:foreground="?android:attr/selectableItemBackground"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <ImageButton
+            android:id="@+id/go_to_home"
+            android:layout_width="180dp"
+            android:layout_height="180dp"
+            android:layout_marginStart="16dp"
+            android:background="@drawable/bn_home"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:contentDescription="@string/home_button"
+            android:onClick="@{(v)->gameWonViewModel.goHome(v)}"
+            app:cornerRadius="40dp"
+            app:layout_constraintBottom_toBottomOf="@+id/play_game"
+            app:layout_constraintStart_toEndOf="@+id/play_game"
+            app:layout_constraintTop_toTopOf="@+id/play_game" />
+
+        <ImageView
+            android:id="@+id/star"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:contentDescription="@string/star_image"
+            android:elevation="30dp"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_star" />
+
+        <Button
+            android:id="@+id/retryLevel"
+            android:layout_width="250dp"
+            android:layout_height="150dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:background="@drawable/button_selector_orange"
+            android:elevation="0dp"
+            android:text="@string/retry_level"
+            android:textColor="@color/colorRed"
+            android:textSize="32sp"
+            app:cornerRadius="20dp"
+            app:layout_constraintBottom_toBottomOf="@+id/play_game"
+            app:layout_constraintEnd_toStartOf="@+id/play_game"
+            app:layout_constraintTop_toTopOf="@+id/play_game" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            android:layout_marginBottom="4dp"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

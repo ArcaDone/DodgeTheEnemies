@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="MissingDefaultResource">
+
+    <data>
+
+        <import
+            alias="v"
+            type="android.view.View" />
+
+        <variable
+            name="mainViewModel"
+            type="com.arcadan.dodgetheenemies.viewmodel.MainViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/record_item"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    app:cardCornerRadius="60dp">
+
+                    <com.skydoves.androidveil.VeilLayout
+                        android:id="@+id/item_record_veil_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/colorCadetBlue"
+                        app:veilLayout_baseAlpha="0.6"
+                        app:veilLayout_baseColor="@color/colorCadetBlue"
+                        app:veilLayout_dropOff="0.5"
+                        app:veilLayout_highlightAlpha="1.0"
+                        app:veilLayout_highlightColor="@color/colorAzure"
+                        app:veilLayout_radius="6dp"
+                        app:veilLayout_shimmerEnable="true"
+                        app:veilLayout_veiled="true">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/experience_constraint"
+                            android:layout_width="250dp"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/bg_filler">
+
+                            <TextView
+                                android:id="@+id/record_text"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="6dp"
+                                android:gravity="center"
+                                android:paddingStart="8dp"
+                                android:text="@string/default_value"
+                                android:textColor="@color/colorGrey"
+                                android:textSize="32sp"
+                                android:textStyle="bold"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                tools:ignore="RelativeOverlap,RtlSymmetry" />
+
+                            <ImageView
+                                android:id="@+id/record_image"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_marginStart="16dp"
+                                android:layout_marginEnd="16dp"
+                                android:background="@drawable/ic_xp"
+                                android:contentDescription="@string/record_image"
+                                app:layout_constraintBottom_toBottomOf="@+id/record_text"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHorizontal_bias="1.0"
+                                app:layout_constraintStart_toEndOf="@+id/record_text"
+                                app:layout_constraintTop_toTopOf="@+id/record_text" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </com.skydoves.androidveil.VeilLayout>
+                </androidx.cardview.widget.CardView>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/gem_main_item"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    app:cardCornerRadius="60dp">
+
+                    <com.skydoves.androidveil.VeilLayout
+                        android:id="@+id/item_gem_veil_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/colorGrey"
+                        app:veilLayout_baseAlpha="0.6"
+                        app:veilLayout_baseColor="@android:color/black"
+                        app:veilLayout_dropOff="0.5"
+                        app:veilLayout_highlightAlpha="1.0"
+                        app:veilLayout_highlightColor="@android:color/darker_gray"
+                        app:veilLayout_radius="6dp"
+                        app:veilLayout_shimmerEnable="true"
+                        app:veilLayout_veiled="true">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/colorGrey">
+
+                            <TextView
+                                android:id="@+id/gem_main_text"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="6dp"
+                                android:gravity="center"
+                                android:paddingStart="8dp"
+                                android:text="@string/default_value"
+                                android:textColor="@android:color/black"
+                                android:textSize="32sp"
+                                android:textStyle="bold"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                tools:ignore="RelativeOverlap,RtlSymmetry" />
+
+                            <ImageView
+                                android:id="@+id/gem_main_image"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_marginStart="16dp"
+                                android:layout_marginEnd="16dp"
+                                android:background="@drawable/ic_gem"
+                                android:contentDescription="@string/image_gem"
+                                app:layout_constraintBottom_toBottomOf="@+id/gem_main_text"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHorizontal_bias="1.0"
+                                app:layout_constraintStart_toEndOf="@+id/gem_main_text"
+                                app:layout_constraintTop_toTopOf="@+id/gem_main_text"
+                                app:layout_constraintVertical_bias="0.0" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    </com.skydoves.androidveil.VeilLayout>
+                </androidx.cardview.widget.CardView>
+
+                <ImageView
+                    android:id="@+id/new_level_gems"
+                    android:layout_width="100dp"
+                    android:layout_height="60dp"
+                    android:elevation="20dp"
+                    android:visibility="@{mainViewModel.observableBooleanRewardText ? v.VISIBLE : v.GONE}"
+                    android:layout_gravity="center"
+                    android:background="@drawable/plus_20"/>
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/coins_main_item"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    app:cardCornerRadius="60dp">
+
+                    <com.skydoves.androidveil.VeilLayout
+                        android:id="@+id/item_coins_veil_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/joystickLightBlue"
+                        app:veilLayout_baseAlpha="0.6"
+                        app:veilLayout_baseColor="@color/colorAccent"
+                        app:veilLayout_dropOff="0.5"
+                        app:veilLayout_highlightAlpha="1.0"
+                        app:veilLayout_highlightColor="@color/joystickYellow"
+                        app:veilLayout_radius="6dp"
+                        app:veilLayout_shimmerEnable="true"
+                        app:veilLayout_veiled="true">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/joystickLightBlue">
+
+                            <TextView
+                                android:id="@+id/coins_main_text"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="6dp"
+                                android:gravity="center"
+                                android:paddingStart="8dp"
+                                android:text="@string/default_value"
+                                android:textColor="@color/colorGrey"
+                                android:textSize="32sp"
+                                android:textStyle="bold"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                tools:ignore="RelativeOverlap,RtlSymmetry" />
+
+                            <ImageView
+                                android:id="@+id/coins_main_image"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_marginStart="16dp"
+                                android:layout_marginEnd="16dp"
+                                android:background="@drawable/ic_coins"
+                                android:contentDescription="@string/coin_image"
+                                app:layout_constraintBottom_toBottomOf="@+id/coins_main_text"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHorizontal_bias="1.0"
+                                app:layout_constraintStart_toEndOf="@+id/coins_main_text"
+                                app:layout_constraintTop_toTopOf="@+id/coins_main_text" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    </com.skydoves.androidveil.VeilLayout>
+                </androidx.cardview.widget.CardView>
+
+                <ImageView
+                    android:id="@+id/new_level_coins"
+                    android:layout_width="120dp"
+                    android:layout_height="60dp"
+                    android:elevation="20dp"
+                    android:visibility="@{mainViewModel.observableBooleanRewardText ? v.VISIBLE : v.GONE}"
+                    android:layout_gravity="center"
+                    android:background="@drawable/plus_200"/>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/heart_main_item"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    app:cardCornerRadius="60dp">
+
+                    <com.skydoves.androidveil.VeilLayout
+                        android:id="@+id/item_heart_veil_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/joystickPink"
+                        app:veilLayout_baseAlpha="0.6"
+                        app:veilLayout_baseColor="@color/darkPink"
+                        app:veilLayout_dropOff="0.5"
+                        app:veilLayout_highlightAlpha="1.0"
+                        app:veilLayout_highlightColor="@color/joystickPink"
+                        app:veilLayout_radius="6dp"
+                        app:veilLayout_shimmerEnable="true"
+                        app:veilLayout_veiled="true">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/joystickPink">
+
+                            <TextView
+                                android:id="@+id/heart_main_text"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="6dp"
+                                android:gravity="center"
+                                android:paddingStart="8dp"
+                                android:text="@{mainViewModel.heartsTextItem}"
+                                android:textColor="@color/colorGrey"
+                                android:textSize="32sp"
+                                android:textStyle="bold"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                tools:ignore="RelativeOverlap,RtlSymmetry" />
+
+                            <ImageView
+                                android:id="@+id/heart_image"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_marginStart="16dp"
+                                android:layout_marginEnd="16dp"
+                                android:background="@drawable/ic_heart"
+                                android:contentDescription="@string/image_heart"
+                                app:layout_constraintBottom_toBottomOf="@+id/heart_main_text"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHorizontal_bias="1.0"
+                                app:layout_constraintStart_toEndOf="@+id/heart_main_text"
+                                app:layout_constraintTop_toTopOf="@+id/heart_main_text" />
+
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:background="@drawable/plus"
+                                app:layout_constraintBottom_toBottomOf="@+id/heart_image"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHorizontal_bias="0.9"
+                                app:layout_constraintStart_toStartOf="@+id/heart_image"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintVertical_bias="0.10" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    </com.skydoves.androidveil.VeilLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <ImageView
+                    android:id="@+id/new_level_hearts"
+                    android:layout_width="120dp"
+                    android:layout_height="60dp"
+                    android:elevation="20dp"
+                    android:visibility="@{mainViewModel.observableBooleanRewardText ? v.VISIBLE : v.GONE}"
+                    android:layout_gravity="center"
+                    android:background="@drawable/plus_10"/>
+            </TableRow>
+
+        </TableLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

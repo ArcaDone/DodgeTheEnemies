@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/dialog_test"
+    android:minWidth="200dp"
+    android:padding="8dp"
+    android:orientation="vertical"
+    tools:ignore="MissingDefaultResource">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="50dp">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/level_selected_card"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="30dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="24dp"
+            android:gravity="center_horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+            <TextView
+                android:id="@+id/level_selected"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/black"
+                android:textColor="@color/colorGrey"
+                android:textSize="50sp"
+                android:paddingEnd="20dp"
+                android:paddingStart="20dp"
+                tools:text="Selected level: 0" />
+        </androidx.cardview.widget.CardView>
+
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/fill_your_backpack_card"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="30dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginEnd="8dp"
+            android:gravity="center_horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/level_selected_card">
+
+            <TextView
+                android:id="@+id/fill_your_backpack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/black"
+                android:paddingEnd="20dp"
+                android:paddingStart="20dp"
+                android:gravity="center_horizontal"
+                android:text="@string/choose_power_ups"
+                android:textColor="@color/colorGrey"
+                android:textSize="50sp" />
+        </androidx.cardview.widget.CardView>
+
+
+        <ImageView
+            android:id="@+id/slurp_red_item"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="60dp"
+            android:background="@drawable/background_rounded"
+            android:backgroundTint="@color/joystickLightBlue"
+            android:contentDescription="@string/image_inventory"
+            android:padding="5dp"
+            android:src="@drawable/power_up_slurp_red"
+            app:layout_constraintEnd_toStartOf="@+id/speed_up_item"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fill_your_backpack_card" />
+
+        <ImageView
+            android:id="@+id/speed_up_item"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/background_rounded"
+            android:backgroundTint="@color/joystickPink"
+            android:contentDescription="@string/image_inventory"
+            android:padding="5dp"
+            android:src="@drawable/power_up_speed_up"
+            app:layout_constraintBottom_toBottomOf="@+id/slurp_red_item"
+            app:layout_constraintEnd_toStartOf="@+id/mega_jump_item"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/slurp_red_item"
+            app:layout_constraintTop_toTopOf="@+id/slurp_red_item" />
+
+        <ImageView
+            android:id="@+id/mega_jump_item"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/background_rounded"
+            android:backgroundTint="@color/joystickYellow"
+            android:contentDescription="@string/image_inventory"
+            android:padding="5dp"
+            android:src="@drawable/power_up_mega_jump"
+            app:layout_constraintBottom_toBottomOf="@+id/speed_up_item"
+            app:layout_constraintEnd_toStartOf="@+id/double_coin_item"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/speed_up_item"
+            app:layout_constraintTop_toTopOf="@+id/speed_up_item" />
+
+        <ImageView
+            android:id="@+id/double_coin_item"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/background_rounded"
+            android:backgroundTint="@color/joystickGreen"
+            android:contentDescription="@string/image_inventory"
+            android:padding="5dp"
+            android:src="@drawable/power_up_double_coins"
+            app:layout_constraintBottom_toBottomOf="@+id/mega_jump_item"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/mega_jump_item"
+            app:layout_constraintTop_toTopOf="@+id/mega_jump_item" />
+
+        <Button
+            android:id="@+id/play_button_dialog"
+            android:layout_width="250dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="60dp"
+            android:layout_marginBottom="60dp"
+            android:text="@string/play"
+            android:textColor="@color/colorWhite"
+            android:textSize="26sp"
+            android:background="@drawable/button_selector_green"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/discard_button"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/slurp_red_item" />
+
+        <Button
+            android:id="@+id/discard_button"
+            android:layout_width="250dp"
+            android:layout_height="100dp"
+            android:layout_marginEnd="16dp"
+            android:text="@string/discard"
+            android:background="@drawable/button_selector_red"
+            android:textColor="@color/colorWhite"
+            android:textSize="26sp"
+            app:layout_constraintBottom_toBottomOf="@+id/play_button_dialog"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/play_button_dialog"
+            app:layout_constraintTop_toTopOf="@+id/play_button_dialog" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
