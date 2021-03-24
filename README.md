@@ -15,6 +15,14 @@ click below to try the game.
 ![3](https://user-images.githubusercontent.com/38981338/112358925-0e3f1200-8cd1-11eb-999e-ab845c4aa7dd.png)
 
 
+# Modules
+
+ - MVVM
+ - Data Binding 
+ - LiveData
+ - Retrofit
+ - Coroutines
+
 ## Contacts
 
 |Name|Personal Repository|
